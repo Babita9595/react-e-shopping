@@ -1,0 +1,23 @@
+.flex-container {
+    display: flex;
+    background-color: DodgerBlue;
+    /* justify-content: space-between; */
+    align-items: center;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+    height: 40px;
+    max-width: 90px;
+    width: 90px;
+    text-align: center;
+  }
+
+  .split-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }

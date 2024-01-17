@@ -1,25 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/Navbar';
+import Home from './components/Home';
+import { Routes, Route } from 'react-router-dom'
+import Product from './components/Product';
+import Product1 from './components/Product1';
+import Cart from './components/Cart';
+import MergeSort from './Merge-Sort/MergeSort';
+import MergeSortVisualization from './SecondMethod/secondmethod';
+import MergeSortVisualization1 from './MergeSortThird/MergeSort';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product" element={<Product />} />
+        <Route path="/products/:id" element={<Product1 />} />
+        <Route path="/cart" element={<Cart />} />
+
+      </Routes>
+
+
+      {/* <MergeSort/> */}
+      {/* <MergeSortVisualization/> */}
+      {/* <MergeSortVisualization1></MergeSortVisualization1> */}
+
+
+    </>
   );
 }
+
 
 export default App;
